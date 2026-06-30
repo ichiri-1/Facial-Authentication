@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(uv sync)",
+      "Bash(uv add *)",
+      "Bash(uv add --group dev *)",
+      "Bash(uv run python scripts/check_cuda.py)",
+      "Bash(uv run python scripts/prepare_dataset.py *)",
+      "Bash(uv run python scripts/make_robustness_sets.py *)",
+      "Bash(uv run python scripts/train.py *)",
+      "Bash(uv run python scripts/evaluate.py *)",
+      "Bash(uv run pytest *)",
+      "Bash(uv run ruff check .)",
+      "Bash(uv run ruff format .)",
+      "Bash(uv run mypy src)",
+      "Bash(nvidia-smi)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(ls *)",
+      "Bash(pwd)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./data/raw/**)",
+      "Read(./data/external/**)",
+      "Bash(pip *)",
+      "Bash(pip3 *)",
+      "Bash(python -m pip *)",
+      "Bash(conda *)",
+      "Bash(poetry *)",
+      "Bash(pipenv *)",
+      "Bash(rm -rf /)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf data/raw/**)",
+      "Bash(rm -rf data/external/**)",
+      "Bash(curl *)",
+      "Bash(wget *)"
+    ]
+  }
+}

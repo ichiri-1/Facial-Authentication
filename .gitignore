@@ -1,0 +1,154 @@
+# =========================
+# Python / uv
+# =========================
+
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# uv のローカルキャッシュ
+.uv-cache/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Test / lint / type check
+# =========================
+
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Environment / secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+secrets/
+*.pem
+*.key
+*.token
+*.secret
+
+# =========================
+# Data
+# =========================
+# 顔画像データセットやrawデータはGit管理しない
+
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+
+data/external/*
+!data/external/.gitkeep
+!data/external/README.md
+
+data/interim/*
+!data/interim/.gitkeep
+!data/interim/README.md
+
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/README.md
+
+# 大きなデータファイル
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# ただし、ドキュメントや小さなサンプルを置く場合は必要に応じて個別に許可する
+# !data/sample/*.csv
+
+# =========================
+# Model checkpoints / ML artifacts
+# =========================
+
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+!outputs/checkpoints/README.md
+
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# =========================
+# Experiment outputs
+# =========================
+# 実験結果は基本的にGit管理しない。
+# 最終レポートに使う図表だけ管理したい場合は、後で個別に許可する。
+
+outputs/logs/*
+!outputs/logs/.gitkeep
+!outputs/logs/README.md
+
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+!outputs/metrics/README.md
+
+outputs/figures/*
+!outputs/figures/.gitkeep
+!outputs/figures/README.md
+
+outputs/tables/*
+!outputs/tables/.gitkeep
+!outputs/tables/README.md
+
+outputs/reports/*
+!outputs/reports/.gitkeep
+!outputs/reports/README.md
+
+runs/
+wandb/
+mlruns/
+tensorboard/
+
+# =========================
+# Claude Code
+# =========================
+
+.claude/settings.local.json
+
+# =========================
+# OS / Editor
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/

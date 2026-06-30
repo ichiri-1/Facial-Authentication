@@ -1,0 +1,40 @@
+[project]
+name = "facial-authentication"
+version = "0.1.0"
+description = "CNN and Vision Transformer comparison for face recognition under occlusion and distance conditions"
+readme = "README.md"
+authors = [
+    { name = "Kazutoshi Nogi", email = "n-kazutoshi@stu.kanazawa-u.ac.jp" },
+]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "torchaudio==2.6.0",
+
+    "timm>=1.0.0",
+    "numpy",
+    "polars",
+    "scikit-learn",
+    "opencv-python",
+    "pillow",
+    "matplotlib",
+    "tqdm",
+    "pyyaml",
+    "rich",
+
+    "albumentations",
+    "tensorboard",
+    "jupyterlab",
+    "ipykernel",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }
